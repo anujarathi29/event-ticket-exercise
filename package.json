@@ -1,0 +1,17 @@
+{
+  "name": "event-ticket-exercise",
+  "version": "1.0.0",
+  "description": "This directory is a [truffle project](https://truffleframework.com/docs/truffle/overview) that contains the required contract, migration and test files. In this exercise you are going to implement the EventTickets.sol and EventTicketsV2.sol contracts.",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anuja",
+  "license": "ISC",
+  "dependencies": {
+    "truffle": "^5.9.3"
+  }
+}

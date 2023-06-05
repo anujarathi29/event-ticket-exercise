@@ -124,7 +124,7 @@ contract EventTicketsV2 {
    function buyTickets(uint eventId, uint noOfTickets) public payable {
     Event storage myEvent = events[eventId];
     require (myEvent.isOpen == true,"The event is not open yet!");
-    require (msg.value > (noOfTickets*PRICE_TICKET),"You have not entered sufficient amount");
+    require (msg.value >= (noOfTickets * PRICE_TICKET),"You have not entered sufficient amount");
     require (myEvent.totalTickets > noOfTickets,"Enough tickets are not available, please reduce the quantity and try again!");
     myEvent.buyers[msg.sender] += noOfTickets;
     myEvent.totalTickets -= noOfTickets;

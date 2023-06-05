@@ -115,10 +115,11 @@ contract('EventTicket', function(accounts) {
 
         describe("endSale()", async() => {
 
+            console.log("Hi am inside this endSale function");
+
             it("the event owner should be able to close ticket sales", async() => {
                 await instance.endSale({from: firstAccount})
                 const eventDetails = await instance.readEvent()
-
                 assert.equal(eventDetails.isOpen, false, "ticket sales should be closed when the owner calls endSale()")
             })
 
